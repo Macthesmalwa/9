@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(118%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(148%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EG%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b7614">
+<meta name="description" content="Geology Assessment Test | deployed with HTMLaunch">
+<link rel="canonical" href="https://Macthesmalwa.github.io/9/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Geology Assessment Test">
+<meta property="og:title" content="Geology Assessment Test">
+<meta property="og:description" content="Geology Assessment Test | deployed with HTMLaunch">
+<meta property="og:url" content="https://Macthesmalwa.github.io/9/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FMacthesmalwa.github.io%2F9%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Geology Assessment Test">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Geology Assessment Test">
+<meta name="twitter:description" content="Geology Assessment Test | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FMacthesmalwa.github.io%2F9%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Geology Assessment Test">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geology Assessment Test</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --text-color: #e0e0e0;
+      --accent-color: #bb86fc;
+      --border-color: #333333;
+      --correct-color: #03dac6;
+      --incorrect-color: #cf6679;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    textarea, input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #2b2b2b;
+      color: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: var(--accent-color);
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .results {
+      display: none;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .badge {
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-top: 5px;
+      display: inline-block;
+    }
+
+    .correct { background-color: var(--correct-color); color: #000; }
+    .incorrect { background-color: var(--incorrect-color); color: #000; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Geology Assessment: Types of Rocks & Rock Cycle</h1>
+  <p>Total Marks: 71 (50 MCQs = 50 Marks, 5 SAQs = 10 Marks, 3 LAQs = 11 Marks)</p>
+
+  <form id="quiz-form">
+    <div class="card">
+      <label for="student_email"><strong>Student Email (Required):</strong></label>
+      <input type="email" id="student_email" name="email" data-fs-field required />
+      <span data-fs-error="email"></span>
+    </div>
+
+    <!-- Section 1: MCQs -->
+    <h2>Section A: Multiple Choice Questions (1 Mark Each)</h2>
+    <div id="mcq-container"></div>
+
+    <!-- Section 2: SAQs -->
+    <h2>Section B: Short Answer Questions (2 Marks Each)</h2>
+    <div id="saq-container"></div>
+
+    <!-- Section 3: LAQs -->
+    <h2>Section C: Long Answer Questions</h2>
+    <div id="laq-container"></div>
+
+    <input type="hidden" id="final_score" name="auto_graded_score" />
+    <input type="hidden" id="full_summary" name="mcq_feedback_summary" />
+
+    <button type="submit" data-fs-submit-btn id="submit-btn">Submit Examination</button>
+  </form>
+
+  <div id="results-panel" class="results">
+    <h2>Submission & Evaluation Results</h2>
+    <div id="score-display"></div>
+    <div id="feedback-display"></div>
+    <div data-fs-success style="margin-top:15px; color: var(--correct-color);">
+      Your responses and scores have been submitted successfully!
+    </div>
+    <div data-fs-error style="margin-top:15px; color: var(--incorrect-color);"></div>
+  </div>
+</div>
+
+<script>
+  // Dataset built from the provided image pages
+  const mcqData = [
+    { q: "What is the smallest part of a rock?", opts: ["Element", "Mineral", "Compound", "Sediment"], a: 1 },
+    { q: "Granite is an example of which type of rock?", opts: ["Sediment", "Metamorphic", "Igneous", "Chemical"], a: 2 },
+    { q: "Pumice is classified under which rock group?", opts: ["Igneous", "Sedimentary", "Metamorphic", "Foliated"], a: 0 },
+    { q: "How are sedimentary rocks formed?", opts: ["Magma cooling", "Compression of sediment", "Extreme heat", "Metamorphism"], a: 1 },
+    { q: "Shale and limestone are examples of which rock class?", opts: ["Igneous", "Sedimentary", "Metamorphic", "Intrusive"], a: 1 },
+    { q: "Gneiss is formed through the transformation of which rock?", opts: ["Shale", "Granite", "Limestone", "Pumice"], a: 1 },
+    { q: "Slate is formed through the transformation of which rock?", opts: ["Shale", "Granite", "Coal", "Chalk"], a: 0 },
+    { q: "What melted material forms igneous rocks upon cooling?", opts: ["Sediment", "Magma", "Mica", "Carbonate"], a: 1 },
+    { q: "Volcanoes are a common source of which rock type?", opts: ["Metamorphic", "Chemical", "Igneous", "Organic"], a: 2 },
+    { q: "What process transforms rocks into metamorphic rocks?", opts: ["Weathering and erosion", "Intense heat and pressure", "Evaporation", "Subduction cooling"], a: 1 },
+    { q: "What forms when rocks melt under the earth during subduction?", opts: ["Sediment", "Magma", "Foliation", "Cement"], a: 1 },
+    { q: "Which process begins the transformation of rocks into sedimentary rocks?", opts: ["Melting", "Weathering and erosion", "Metamorphism", "Intrusion"], a: 1 },
+    { q: "Particles of sand become sedimentary rock when compressed and...", opts: ["Melted", "Cooled", "Cemented", "Eroded"], a: 2 },
+    { q: "Which rock type is formed by the remains of animals and plants?", opts: ["Chemical sedimentary", "Organic sedimentary", "Foliated metamorphic", "Extrusive igneous"], a: 1 },
+    { q: "Limestone is primarily composed of calcium carbonate from...", opts: ["Volcanic ash", "Shells of marine animals", "Evaporated salt", "Plant roots"], a: 1 },
+    { q: "Which fine limestone formed millions of years ago is soft and prone to erosion?", opts: ["Coal", "Chalk", "Gypsum", "Gneiss"], a: 1 },
+    { q: "Coal forms from the compaction of plant remains in...", opts: ["Oceans", "Sediment", "Magma", "Mica"], a: 1 },
+    { q: "Chemical sedimentary rocks are formed by the evaporation of...", opts: ["Magma", "Mineral-rich water", "Rainwater", "Melted mica"], a: 1 },
+    { q: "Table salt (halite) is an example of which rock type?", opts: ["Organic sedimentary", "Chemical sedimentary", "Foliated metamorphic", "Igneous"], a: 1 },
+    { q: "Gypsum is used as a by-product in making cement and...", opts: ["Glass", "Building materials", "Steel", "Metals"], a: 1 },
+    { q: "What causes the changes in rocks during contact metamorphism?", opts: ["Tectonic collision", "Temperature increase from magma intrusion", "Pressure from overlying rocks", "Oceanic evaporation"], a: 1 },
+    { q: "In contact metamorphism, where is the effect on rocks the greatest?", opts: ["Farther away", "Closer to the magma intrusion", "At subduction zones", "In ocean basins"], a: 1 },
+    { q: "Regional metamorphism takes place up to thousands of kilometers wide at...", opts: ["Riverbeds", "The edge of plates", "Volcanic vents", "Dried ocean beds"], a: 1 },
+    { q: "Which forces cause regional metamorphism during plate collisions?", opts: ["Evaporation & cooling", "Weight of overlying rocks and pressure", "Erosion and weathering", "Sediment deposition"], a: 1 },
+    { q: "What feature characterises foliated metamorphic rocks?", opts: ["Granular structure", "Series of different colored lines/bands", "Glassy texture", "Fossil inclusions"], a: 1 },
+    { q: "What causes the formation of parallel bands in foliated rocks?", opts: ["Pressure placed from one direction", "Sustained pressure from all angles", "Rapid cooling", "Evaporation of minerals"], a: 0 },
+    { q: "The presence of which mineral causes mica grains to grow into schist?", opts: ["Calcite", "Mica", "Halite", "Gypsum"], a: 1 },
+    { q: "Non-foliated rocks are typically created during...", opts: ["Regional metamorphism", "Contact metamorphism", "Sedimentation", "Volcanic eruption"], a: 1 },
+    { q: "Why do non-foliated rocks lack bands?", opts: ["Pressure comes from one angle", "Pressure comes from all angles and is equal", "They cool too fast", "They contain no minerals"], a: 1 },
+    { q: "Most non-foliated metamorphic rocks are made of...", opts: ["Many mixed minerals", "One-mineral rocks", "Plant matter", "Marine shells"], a: 1 },
+    { q: "Rocks are classified into three main groups based on...", opts: ["Their color", "How they are formed", "Their age", "Their weight"], a: 1 },
+    { q: "Magma that cools slowly below ground forms large minerals due to...", opts: ["Rapid heat loss", "Sustained temperature", "Time taken to cool", "Extreme pressure"], a: 2 },
+    { q: "Magma cooling quickly on the surface forms...", opts: ["Large minerals", "Small minerals", "Foliated layers", "Chemical crystals"], a: 1 },
+    { q: "Which process breaks down rocks at the Earth's surface?", opts: ["Subduction", "Weathering", "Intrusion", "Metamorphism"], a: 1 },
+    { q: "When sediments are deposited in one place, over time they become...", opts: ["Melted", "Compressed", "Eroded", "Intruded"], a: 1 },
+    { q: "Any type of rock can be transformed into igneous rock if it...", opts: ["Evaporates", "Melts and cools", "Gets compressed", "Erodes"], a: 1 },
+    { q: "Subduction occurs when rocks move...", opts: ["To mountain tops", "Under the surface of the earth", "Into ocean currents", "Into the atmosphere"], a: 1 },
+    { q: "Intense heat, chemicals, and fluids from cooling magma can transform rock into...", opts: ["Igneous rock", "Sedimentary rock", "Metamorphic rock", "Halite"], a: 2 },
+    { q: "Sedimentary rocks consist of particles of...", opts: ["Only one rock type", "A wide variety of different rocks", "Only volcanic ash", "Pure mica"], a: 1 },
+    { q: "Chalk is formed from marine animal remains over...", opts: ["Hundreds of years", "Thousands of years", "Millions of years", "Decades"], a: 2 },
+    { q: "Which mineral source forms calcium carbonate in organic rocks?", opts: ["Animal shells", "Quartz", "Feldspar", "Halite"], a: 0 },
+    { q: "When ancient, dried-up oceans evaporate, they leave behind...", opts: ["Igneous rocks", "Chemical rocks", "Organic rocks", "Foliated rocks"], a: 1 },
+    { q: "Salt water evaporation produces halite and...", opts: ["Coal", "Gypsum", "Shale", "Slate"], a: 1 },
+    { q: "Magma intrusion effect gradually weakens as distance...", opts: ["Decreases", "Increases", "Stays constant", "Doubles"], a: 1 },
+    { q: "Regional metamorphism is associated with which geological boundary?", opts: ["Divergent", "Transform", "Convergent plate boundaries", "Hotspots"], a: 2 },
+    { q: "Slate is classified as a...", opts: ["Foliated metamorphic rock", "Non-foliated metamorphic rock", "Chemical sedimentary rock", "Igneous rock"], a: 0 },
+    { q: "Which metamorphic rock transforms from clay to slate, and then to...", opts: ["Granite", "Schist", "Gneiss", "Halite"], a: 1 },
+    { q: "Particles in non-foliated rocks do not become elongated because pressure is...", opts: ["Absent", "Applied from one direction", "Equal from all angles", "Constantly changing direction"], a: 2 },
+    { q: "Which process describes minerals coming out of solution and crystallizing?", opts: ["Erosion", "Chemical rock formation", "Foliation", "Subduction"], a: 1 },
+    { q: "The ongoing transition of rocks from one type to another is called the...", opts: ["Rock Cycle", "Metamorphic shift", "Sedimentary process", "Tectonic shift"], a: 0 }
+  ];
+
+  const saqData = [
+    { q: "1. What is the difference between contact and regional metamorphism? (2 Marks)", key: "Contact metamorphism is caused by localized heat from magma intrusion. Regional metamorphism occurs over large areas due to intense pressure and heat from tectonic plate collisions/subduction." },
+    { q: "2. How is chemical sedimentary rock formed? (2 Marks)", key: "Formed by the evaporation of mineral-rich water, leaving behind minerals that crystallize out of solution (e.g., halite, gypsum)." },
+    { q: "3. What causes foliation in metamorphic rocks? (2 Marks)", key: "Pressure applied upon a rock from one direction over long periods, causing particles/minerals to align in parallel bands." },
+    { q: "4. Explain how organic sedimentary rock like coal or chalk is formed. (2 Marks)", key: "Formed from the accumulated remains of plants or marine animals (shells) that are buried, compacted, and hardened over time." },
+    { q: "5. How can any type of rock be transformed into an igneous rock according to the rock cycle? (2 Marks)", key: "By being pushed under the surface (subduction), melting into magma due to intense heat, and then cooling/solidifying." }
+  ];
+
+  const laqData = [
+    { q: "1. Describe the complete Rock Cycle. Explain how igneous, sedimentary, and metamorphic rocks transition into one another with specific processes. (4 Marks)", key: "Must cover: Melting & cooling (Igneous), Weathering, erosion, compression & cementation (Sedimentary), and Heat & pressure (Metamorphic) transitions." },
+    { q: "2. Differentiate between Foliated and Non-Foliated Metamorphic rocks. Discuss the role of pressure direction, mineral composition, and provide an example of each. (4 Marks)", key: "Foliated: Pressure from one direction, mineral alignment/bands (e.g., Slate/Schist). Non-Foliated: Equal pressure from all angles, usually single mineral, no bands (e.g., Marble/Quarzite or non-foliated metamorphic rock)." },
+    { q: "3. Compare the formation of Organic Sedimentary Rocks and Chemical Sedimentary Rocks, giving at least two examples for each. (3 Marks)", key: "Organic: Remains of living organisms compacted (Coal, Chalk, Organic Limestone). Chemical: Mineral evaporation/crystallization from solution (Halite, Gypsum)." }
+  ];
+
+  // Render Questions
+  const mcqWin = document.getElementById('mcq-container');
+  mcqData.forEach((item, idx) => {
+    let html = `<div class="question"><p><strong>Q${idx+1}. ${item.q}</strong></p><div class="options">`;
+    item.opts.forEach((opt, oIdx) => {
+      html += `<label><input type="radio" name="mcq_${idx}" value="${oIdx}" required> ${opt}</label>`;
+    });
+    html += `</div></div>`;
+    mcqWin.innerHTML += html;
+  });
+
+  const saqWin = document.getElementById('saq-container');
+  saqData.forEach((item, idx) => {
+    saqWin.innerHTML += `<div class="question"><p><strong>Q${idx+1}. ${item.q}</strong></p><textarea name="saq_${idx}" rows="3" required></textarea></div>`;
+  });
+
+  const laqWin = document.getElementById('laq-container');
+  laqData.forEach((item, idx) => {
+    laqWin.innerHTML += `<div class="question"><p><strong>Q${idx+1}. ${item.q}</strong></p><textarea name="laq_${idx}" rows="5" required></textarea></div>`;
+  });
+
+  // Handle Form Logic
+  document.getElementById('quiz-form').addEventListener('submit', function(e) {
+    let mcqScore = 0;
+    let feedbackHtml = '<h3>MCQ Automated Grading & Key:</h3>';
+    let summaryText = '';
+
+    mcqData.forEach((item, idx) => {
+      const selected = document.querySelector(`input[name="mcq_${idx}"]:checked`);
+      const userVal = selected ? parseInt(selected.value) : -1;
+      const isCorrect = userVal === item.a;
+      if(isCorrect) mcqScore++;
+
+      const statusBadge = isCorrect ? '<span class="badge correct">Correct (+1)</span>' : '<span class="badge incorrect">Incorrect (0)</span>';
+      feedbackHtml += `<p><strong>Q${idx+1}:</strong> ${item.q}<br/>Your Answer: ${userVal >= 0 ? item.opts[userVal] : 'None'} | Correct: <strong>${item.opts[item.a]}</strong> ${statusBadge}</p>`;
+      summaryText += `Q${idx+1}: ${isCorrect ? 'PASS' : 'FAIL'}; `;
+    });
+
+    feedbackHtml += '<h3>Subjective Answer Marking Scheme (Pending Manual Review):</h3>';
+    saqData.forEach((item, idx) => {
+      feedbackHtml += `<p><strong>SAQ ${idx+1}:</strong> ${item.q}<br/><em>Model Answer/Criteria:</em> ${item.key}</p>`;
+    });
+    laqData.forEach((item, idx) => {
+      feedbackHtml += `<p><strong>LAQ ${idx+1}:</strong> ${item.q}<br/><em>Model Answer/Criteria:</em> ${item.key}</p>`;
+    });
+
+    document.getElementById('final_score').value = `${mcqScore}/50 (MCQs Only)`;
+    document.getElementById('full_summary').value = summaryText;
+
+    document.getElementById('score-display').innerHTML = `<h3>Auto-Graded MCQ Score: ${mcqScore} / 50</h3><p><em>Note: SAQs (10 Marks) and LAQs (11 Marks) require teacher grading based on the criteria below.</em></p>`;
+    document.getElementById('feedback-display').innerHTML = feedbackHtml;
+    document.getElementById('results-panel').style.display = 'block';
+  });
+</script>
+
+<!-- Formspree Integration Script -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#quiz-form', formId: 'xyegaedd' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
